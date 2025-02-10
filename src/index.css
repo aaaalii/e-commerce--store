@@ -3,3 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.product-card__container{
+  width: 400px;
+  height: 220px;
+}
+
+.home-page{
+
+}
+
+.full-height{
+  height: calc(100dvh - 48px);
+}
