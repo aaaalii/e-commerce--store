@@ -78,9 +78,19 @@ export default function Home(){
   }
 
   async function getProductByCategory(category){
-    setProducts([]);
+    let check = false;
+    if(searchList.length === 0){
+      setProducts([]);
+    } else {
+      setSearchList([]);
+      check = true;
+    }
     let response = await getProductsByCategory(category);
-    setProducts(response['data']);
+    if(check){
+      setSearchList(response['data']);
+    }else {
+      setProducts(response['data']);
+    }
   }
 
   if(products.length === 0){
